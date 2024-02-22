@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+,<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>To Do App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+        
+        <style>
+            body{
+                background-color: rgb(221, 221, 221);
+                font-family: Georgia, serif;
+                padding-top: 60px;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+                {
+                font-family : 'Raleway', sans-serif;
+            }
+            a,
+            p {
+                color: rgb(0, 0, 0);
+            }
+
+            .container{
+                max-width: 700px;
+                margin: auto;
+                background-color: darkgray;
+                -webkit-box-shadow :2px  2px 13px -4px rgba(0, 0, 0, 0.21);
+                box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            }
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+                color: rgb(17, 1, 1);
+                padding: auto;
+                border-radius: 5px 5px 2px 2px;
+                background-color: rgb(171, 224, 171);
+            }
+            .header a{
+                color: rgb(6, 4, 155);
+                text-decoration: solid;
+                margin-right: 7px;
+            }
+
+            .header h3{
+                margin-left: 5px;
+            }
+
+            .task-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+                background-color:rgb(219, 214, 214);
+                border-top: 2px solid rgb(19, 16, 18)
+            }
+            .task-title{
+                display: flex;
+            }
+
+            .task-title a{
+                text-decoration: none;
+                color: brown;
+                margin-left: 5px;
+            }
+
+            .task-complete-icon{
+                height: 15px;
+                width: 15px;
+                background-color: rgb(4, 136, 224);
+                border-radius: 50%;
+            }
+
+            .task-incomplete-icon{
+                height: 15px;
+                width: 15px;
+                background-color: rgb(158, 135, 135);
+                border-radius: 50%;
+            }
+           
+            .delete-link{
+                text-decoration:dashed;
+                font-weight: 100;
+                color: red;
+                font-size: 40px;
+                line-height: 10px;
+            }
+
+            #search-add-wrapper{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+            }
+
+            #add-link{
+                color:rgb(30, 2, 75) ;
+                text-decoration:none;
+                font-size:50px;
+                text-shadow: 2px 2px gray;
+                margin-right: 5px;
+            }
+
+            .heading-top h3{
+                text-align: center;
+                margin-bottom: -2px ;
+            }
+
+            input[type=text],
+            input[type=password],
+            textarea {
+                border-color: rgb(22, 22, 22);
+                border-radius: 8px;
+                margin-left: 5px;
+                padding: 8px;
+                width: 92%;
+            }
+            label{
+                padding-top: 10px !important;
+                display: block;
+            }
+
+            .button{
+                border-color:black ;
+                background-color:white;
+                color: rgb(19, 18, 18);
+                font-size: medium;
+                border-radius: 7px;
+                cursor:auto;
+                text-decoration: none;
+            }
+
+            .form-body{
+                padding: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+        {% block content %}
+
+        {% endblock content %}
+        </div>
+    </body>
+</html>

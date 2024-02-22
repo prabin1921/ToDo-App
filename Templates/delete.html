@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="form-body">
+    <form method = 'POST' action = ''>
+        {% csrf_token %}
+        <h3>Sure! You want to delete a task?</h3>
+        <p><input class="button" type = 'submit' value = 'Yes'></p>
+    </form>
+    <p><a href="{% url 'tasks' %}"><input class="button" type = 'Submit' value="Cancel"></a></p>
+</div>
+
+{% endblock content %}
